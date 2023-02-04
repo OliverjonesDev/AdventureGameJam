@@ -54,7 +54,8 @@ public class JSONReadData : MonoBehaviour
     void CreateObjectDataDir()
     {
         var sceneName = SceneManager.GetActiveScene().name;
-        var path = Application.dataPath + " /StreamingAssets/"+"ObjectData/" + sceneName + "/";
+       //var path = Application.dataPath + " /StreamingAssets/"+"ObjectData/" + sceneName + "/";
+        var path = Application.streamingAssetsPath+"ObjectData/" + sceneName + "/";
         objectDataPath = path;
         Debug.Log(path);
         if (!Directory.Exists(objectDataPath))
